@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader Howell Home Theatre</title>
+    <link id="csslink" rel="stylesheet" href="css/main.css">
+    
+    <!-- Script to enable stylesheet switching. -->
+    <script src="js/css-switcher.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="container">
+        <a href="index.html" title="Trader Howell Home Theatre - Home"><img id="logo" src="img/logo.svg" alt="Trader Howell Home Theatre" width="200"></a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="index.html#movies">Movies</a></li>
+                <li><a href="index.html#dataset">Dataset</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><button onclick="toggleCSS()">Switch Style</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Movies -->
+    <section id="movies" class="container">
+        <h1>Movies</h1>
+        <p>Now Playing and Upcoming Movies</p>
+        <div class="wrapper">
+            <a class="movie" href="raiders.html" title="Raiders of the Lost Ark (1981)"><img class="poster" src="img/raiders.webp" alt="Raiders of the Lost Ark (1981)" width="200" height="300"></a>
+            <a class="movie" href="romancing.html" title="Romancing the Stone (1984)"><img class="poster" src="img/romancing.webp" alt="Romancing the Stone (1984)" width="200" height="300"></a>
+            <a class="movie" href="jurassic.html" title="Jurassic Park (1993)"><img class="poster" src="img/jurassic.webp" alt="Jurassic Park (1993)" width="200" height="300"></a>
+            <a class="movie" href="mummy.html" title="The Mummy (1999)"><img class="poster" src="img/mummy.webp" alt="The Mummy (1999)" width="200" height="300"></a>
+        </div>
+    </section>
+
+    <!-- Dataset -->
+    <section id="dataset" class="container">
+            <h2>Current Movie Dataset</h2>
+            <p>A Table of Current and Upcoming Movies</p>
+        <div class="wrapper">
+            <table>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>MPAA Rating</th>
+                    <th>Release Date</th>
+                    <th>Genre</th>
+                    <th>Runtime</th>
+                    <th>Director</th>
+                </tr>
+                <tr>
+                    <td>Raiders of the Lost Ark</td>
+                    <td>PG</td>
+                    <td>06/12/1981 (US)</td>
+                    <td>Adventure, Action</td>
+                    <td>1h 55m</td>
+                    <td>Steven Spielberg</td>
+                </tr>
+                <tr>
+                    <td>Romancing the Stone</td>
+                    <td>PG</td>
+                    <td>03/30/1984 (US)</td>
+                    <td>Adventure, Action, Romance, Comedy</td>
+                    <td>1h 46m</td>
+                    <td>Robert Zemeckis</td>
+                </tr>
+                <tr>
+                    <td>Jurassic Park</td>
+                    <td>PG-13</td>
+                    <td>06/11/1993 (US)</td>
+                    <td>Adventure, Science Fiction</td>
+                    <td>2h 7m</td>
+                    <td>Steven Spielberg</td>
+                </tr>
+                <tr>
+                    <td>The Mummy</td>
+                    <td>PG-13</td>
+                    <td>05/07/1999 (US)</td>
+                    <td>Adventure, Action, Fantasy</td>
+                    <td>2h 4m</td>
+                    <td>Stephen Sommers</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- About -->
+    <article id="about" class="container">
+        <h1>About This Assignment</h1>
+        <h2>Content (HTML) Requirements</h2>
+        <p>Here's a rundown of the <b>requirements</b> for part 1:</p>
+        <ul>
+            <li>This site has an <i>index.html</i> landing page and a separate page for each movie.</li>
+            <li>This site uses <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> are utilized.
+                <ul>
+                    <li>Other tags are used throughout the site, including but not limited to <code>&lt;code&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;strong&gt;</code>, and <code>&lt;b&gt;</code>.</li>
+                </ul>
+            </li>
+            <li>This site has a navigation menu consisting of a homepage link and scrolling anchor links.</li>
+            <li>Every page has a page title using <code>&lt;title&gt;</code> tags.</li>
+            <li>This about section demonstrates different size headings.
+                <ul>
+                    <li>Although size changes with <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;h3&gt;</code> respectively, they are still used semantically.</li>
+                </ul>
+            </li>
+            <li>The landing page contains 5 images (one logo, and four movie posters), and the movie pages contain 2 images (one logo and one movie poster).
+                <ul>
+                    <li>Image paths are relative and images are stored in the <i>img</i> folder.</li>
+                    <li><code>&lt;img&gt;</code> tags specify alt text and specify titles where appropriate.</li>
+                </ul>
+            </li>
+            <li>There are several internal links throughout the site.
+                <ul>
+                    <li>The movie posters are links to the other four pages.</li>
+                    <li>The navigation menu home link and logo links back to the landing page from the other four page.</li>
+                    <li>The navigation menu will automatically smooth scroll you to the relevant content on the landing page.</li>
+                    <li>All internal links are relative and open in the same tab.</li>
+                </ul>
+            </li>
+            <li>There are several external links throughout the site.
+                <ul>
+                    <li>A link to TMDB as credit for the images and info is in the footer.</li>
+                    <li>A link to my personal site, hosted elsewhere at a different domain, is also in the footer.</li>
+                    <li>All external links open in a new tab.</li>
+                </ul>
+            </li>
+            <li>Hopefully you've seen several list items by now.</li>
+            <li>A table can be found under the Dataset section which contains movie data.</li>
+            <li>Copyright information using the &copy; symbol is in the footer.</li>
+            <li>Classes and IDs are used as appropriate.</li>
+            <li>A <code>&lt;button&gt;</code> in the navigation menu switches the CSS using a bit of JavaScript provided by the assignment.</li>
+            <li><strong>Pages are accessible and use best practices</strong> where possible, and have been tested in <i>Blink</i> and <i>Gecko</i> based browsers.
+                <ul>
+                    <li>I have utilized <a href="https://caniuse.com/" title="Visit the Can I Use Website" target="_blank">caniuse.com</a> to do a lot of the heavy lifting.</li>
+                    <li>Internet Explorer is officially dead. Seek professional help if you are still using it.</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Style (CSS) Requirements</h2>
+        <p>Here's a rundown of the <b>requirements</b> for part 2:</p>
+        <ul>
+            <li>CSS properties <code>font-family</code>, <code>font-size</code>, <code>color</code>, and <code>background-color</code> are used throughout the stylesheet.
+            <ul>
+                <li>The font color for links changes for the <code>:visited</code> and <code>:hover</code> states.</li>
+            </ul>
+            </li>
+            <li>CSS properties <code>margin</code> and <code>padding</code> are used as necessary.</li>
+            <li>
+                <ul>
+                    <li>The movie posters are animated on page load (not when scrolled into view because we're not supposed to use additional JavaScript) using <code>@keyframes</code> and the <code>animation</code> property.</li>
+                    <li>The movie posters are also animated on <code>:hover</code> state using the <code>transition</code> property.</li>
+                </ul>
+            </li>
+            <li>The navigation menu is styled appropriately so it doesn't appear like a plain list.</li>
+        </ul>
+        <h3>Alternate Style</h3>
+        <p>The alternate stylesheet can be toggled using the button in the navigation menu.</p>
+    </article>
+
+    <!-- Footer -->
+    <footer id="footer" class="container">
+        <p>Movie posters and information courtesy of <a href="https://www.themoviedb.org/" title="Visit The Movie Database (TMDB)" target="_blank">The Movie Database (TMDB)</a>.</p>
+        <p>Copyright &copy; 2023 <a href="https://traderhowell.com/" title="Visit Brendan Howell's Website" target="_blank">Brendan Howell</a></p>
+    </footer>
+</body>
+</html>
