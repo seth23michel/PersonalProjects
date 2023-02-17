@@ -1,0 +1,239 @@
+/* Import the Montserrat and Fira Code fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Define global variables. */
+:root {
+    /* Define the global color palette. */
+    --accent-color: rgb(118, 185, 0);
+    --accent-color-alt: rgb(200, 255, 145);
+    --text-color-dark: rgb(34, 34, 34);
+    --text-color-light: rgb(255, 255, 255);
+    --section-color-dark: rgba(0, 0, 0, 0.5);
+    --section-color-light: rgba(255, 255, 255, 0.8);
+    --background-color: linear-gradient(-20deg, rgb(43, 88, 118) 0%, rgb(78, 67, 118) 100%) fixed;
+
+    /* Define the global spacing. */
+    --common-spacing: 50px;
+}
+
+/* Define animations. */
+@keyframes slideIn {
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+/* Enable smooth scrolling.*/
+html {
+	scroll-behavior: smooth;
+}
+
+/* Define global tag and class styles. */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: var(--text-color-light);
+    margin: 0;
+    background: var(--background-color);
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--accent-color-alt);
+}
+
+a:hover {
+    color: var(--accent-color-alt);
+}
+
+nav {
+    margin-top: var(--common-spacing);
+}
+
+nav ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 15px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+}
+
+nav ul li a:visited {
+    color: var(--accent-color);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color-alt);
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    text-align: left;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+button, .button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    background-color: transparent;
+}
+
+button:hover, .button:hover {
+    color: var(--text-color-dark);
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+}
+
+.container {
+    padding: var(--common-spacing) 10%;
+}
+
+.wrapper {
+    padding: var(--common-spacing) 0;
+}
+
+.poster {
+    opacity: 0;
+    left: calc(-1 * var(--common-spacing));
+    position: relative;
+    animation: slideIn 1s forwards;
+    transition: all 0.5s ease-out;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Define ID specific styles. */
+
+#header {
+    text-align: center;
+    background: var(--section-color-dark);
+}
+
+#header .wrapper {
+    padding: 0;
+}
+
+#movies {
+    text-align: center;
+}
+
+#movies .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--common-spacing);
+    justify-content: center;
+}
+
+#movies .poster:hover {
+    box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+#movies .movie:nth-child(2) .poster {
+    animation-delay: 0.2s;
+}
+
+#movies .movie:nth-child(3) .poster {
+    animation-delay: 0.4s;
+}
+
+#movies .movie:nth-child(4) .poster {
+    animation-delay: 0.6s;
+}
+
+#dataset {
+    text-align: center;
+    background-color: var(--section-color-dark);
+}
+
+#dataset .wrapper {
+    overflow-x: auto;
+}
+
+#about {
+    color: var(--text-color-dark);
+    background-color: var(--section-color-light);
+}
+
+#footer {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Movie Details Page*/
+#movie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--common-spacing);
+}
+
+@media only screen and (max-width: 768px) {
+    #movie {
+        flex-wrap: wrap;
+    }
+}
+
+#movie .poster {
+    min-width: 300px;
+    height: auto;
+}
+
+.mpaa-rating {
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 0 4px 4px 0;
+    color:rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Disable motion if preferred in supported browsers. */
+@media (prefers-reduced-motion) {
+	html {
+		scroll-behavior: auto;
+	}
+
+    .poster {
+        opacity: 1;
+        left: 0;
+    }
+}
